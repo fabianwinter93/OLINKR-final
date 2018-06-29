@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1020442205781",
+    "firebase_url": "https://olinkr-5ac4f.firebaseio.com",
+    "project_id": "olinkr-5ac4f",
+    "storage_bucket": "olinkr-5ac4f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1020442205781:android:00941e1046549af1",
+        "android_client_info": {
+          "package_name": "com.ocr.fabian.olinkr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1020442205781-vb85guk82lp44dmpc5nl3e5570e6e23c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_pBXg0SxA9w-20qGum2TzGaOYUXbwOKI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

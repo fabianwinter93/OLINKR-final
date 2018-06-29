@@ -183,6 +183,7 @@ public class OCRActivity extends AppCompatActivity implements View.OnClickListen
         scrollLin.addView(block);
     }
 
+    /*** https://github.com/firebase/quickstart-android/blob/master/mlkit/app/src/main/java/com/google/firebase/samples/apps/mlkit/textrecognition/TextRecognitionProcessor.java ***/
     private void runTextRecognition(Bitmap bitmap) {
         //scrollLin.removeAllViews();
         FirebaseVisionImage image = FirebaseVisionImage.fromBitmap(bitmap);
@@ -198,8 +199,6 @@ public class OCRActivity extends AppCompatActivity implements View.OnClickListen
                                 for (FirebaseVisionText.Block block: firebaseVisionText.getBlocks()) {
                                     String text = block.getText();
                                     completeString += text + " ";
-                                    //completeText.add(text);
-                                    //addTextToScrollView(text);
                                 }
                                 addTextToScrollView(completeString);
                             }

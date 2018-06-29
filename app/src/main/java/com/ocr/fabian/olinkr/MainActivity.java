@@ -63,8 +63,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(ocrIntent);
             }
         });
-
-        //getWindow().requestFeature(Window.FEATURE_NO_TITLE);
     }
 
     @Override

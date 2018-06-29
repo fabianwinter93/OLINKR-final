@@ -53,7 +53,6 @@ public class OCRActivity extends AppCompatActivity implements View.OnClickListen
     static final int GET_CONTENT_REQUEST = 1;
 
     /*** ML ***/
-    private FirebaseVisionImage image;
     private FirebaseVisionTextDetector detector;
     private TextClassificationManager tcm;
     private TextClassifier classifier;
@@ -133,7 +132,6 @@ public class OCRActivity extends AppCompatActivity implements View.OnClickListen
         } else {
             startActivityForResult(chooserIntent, GET_CONTENT_REQUEST);
         }
-
     }
 
     @Override

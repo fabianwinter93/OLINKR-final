@@ -23,7 +23,6 @@ public class Textblock extends LinearLayout{
     private boolean isCollapsed;
     private boolean canCollapse;
 
-    private CheckBox checkBox;
 
 
     private int maxLen = 40;
@@ -49,6 +48,7 @@ public class Textblock extends LinearLayout{
         textView.setLayoutParams(textLayoutParams);
         textView.setBackgroundColor(getResources().getColor(R.color.background_white));
         textView.setTextColor(Color.BLACK);
+        textView.setTextIsSelectable(true);
 
         this.addView(textView);
     }
@@ -109,9 +109,5 @@ public class Textblock extends LinearLayout{
 
         public void onClick() {
         collapse();
-    }
-
-    public void onLongClick() {
-        textView.setTextIsSelectable(true);
     }
 }

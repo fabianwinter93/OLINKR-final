@@ -49,8 +49,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 
 
-public class OCRActivity extends AppCompatActivity implements View.OnClickListener,
-        View.OnLongClickListener {
+public class OCRActivity extends AppCompatActivity implements View.OnClickListener {
     static final int GET_CONTENT_REQUEST = 1;
 
     /*** ML ***/
@@ -145,8 +144,6 @@ public class OCRActivity extends AppCompatActivity implements View.OnClickListen
                 Uri imageUri = data.getData();
                 lastImageTaken = getBitmapFromUri(imageUri);
                 runTextRecognition(lastImageTaken);
-            } else {
-                showToast("AAA");
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -170,15 +167,6 @@ public class OCRActivity extends AppCompatActivity implements View.OnClickListen
         }
     }
 
-    @Override
-    public boolean onLongClick(View v) {
-        if(v instanceof Textblock) {
-            ((Textblock) v).onLongClick();
-            return true;
-        }
-        return false;
-    }
-
     private void addTextToScrollView(String text) {
         //completeText.add(text);
         block = new Textblock(this);
@@ -190,8 +178,8 @@ public class OCRActivity extends AppCompatActivity implements View.OnClickListen
         if(text.length() > maxTextLen) {
             block.setOnClickListener(this);
         }
-        block.setOnLongClickListener(this);
         block.setText(text);
+        // reset
         completeString = "";
         scrollLin.removeAllViews();
         scrollLin.addView(block);
@@ -211,7 +199,7 @@ public class OCRActivity extends AppCompatActivity implements View.OnClickListen
                                 }
                                 for (FirebaseVisionText.Block block: firebaseVisionText.getBlocks()) {
                                     String text = block.getText();
-                                    completeString += text + "\n";
+                                    completeString += text + " ";
                                     //completeText.add(text);
                                     //addTextToScrollView(text);
                                 }

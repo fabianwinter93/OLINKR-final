@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
             /*** Camera ***/
             Bundle extras = data.getExtras();
             lastImageTaken = (Bitmap) extras.get("data");
-            saveImageToDevice(lastImageTaken);
+            //saveImageToDevice(lastImageTaken);
             ocrIntent.putExtra("cam_pic", lastImageTaken);
             startActivity(ocrIntent);
         }
